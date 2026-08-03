@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dubless-doubles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body data-screen="title">
+    <main>
+        <section id="title-screen" aria-labelledby="title-screen-heading">
+            <h1 id="title-screen-heading">ダブラズダブルス</h1>
+
+            <div>
+                <label for="player-count">人数</label>
+                <select id="player-count" name="player-count"></select>
+            </div>
+
+            <div>
+                <label for="court-count">コート数</label>
+                <select id="court-count" name="court-count"></select>
+            </div>
+
+            <button type="button" id="create-button">作成</button>
+        </section>
+
+        <section id="app-screen" aria-label="アプリ画面" hidden>
+            <header>
+                <h1>ダブラズダブルス</h1>
+                <button type="button" aria-label="メニューを開く">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </header>
+
+            <div class="app-main">
+                <div class="match-list" aria-label="対戦要素一覧">
+
+                </div>
+
+                <button type="button" class="add-match-button" aria-label="対戦要素を追加">＋</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="match-modal" class="match-modal" hidden>
+        <button type="button" class="match-modal__backdrop" aria-label="閉じる"></button>
+        <section class="match-modal__panel" role="dialog" aria-modal="true" aria-labelledby="match-modal-title">
+            <h2 id="match-modal-title">試合設定</h2>
+            <div class="match-modal__body"></div>
+        </section>
+    </div>
+</body>
+
+</html>
